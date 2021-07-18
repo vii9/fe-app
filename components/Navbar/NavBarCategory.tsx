@@ -1,51 +1,69 @@
 import { useState } from "react";
-import CategoryItem from "./CategoryItem";
+import ReactHtmlParser from "react-html-parser";
 
-const dataCateRaw = {
-  monitor: [
-    {
-      isHref: 'monitor',
-      data: [
-        'monitor01',
-        'monitor02',
-        'monitor03',
-      ]
-    },
-    {
-      isHref: 'Xmonitor',
-      data: [
-        'Xmonitor01',
-        'Xmonitor02',
-        'Xmonitor03',
-      ]
-    },
-    {
-      isHref: 'ZXmonitor',
-      data: [
-        'ZXmonitor01',
-        'ZXmonitor02',
-        'ZXmonitor03',
-      ]
-    },
-  ],
-  laptop: {
-    isHref: 'laptop',
-    data: [
-      'laptop01',
-      'laptop02',
-      'laptop03',
-    ]
+const dataCateRaw = [
+  {
+    slugCate: "monitor",
+    dataRes: [
+      {
+        href: "monitor",
+        title: "This is monitor",
+        data: ["monitor01", "monitor02", "monitor03"],
+      },
+      {
+        href: "Xmonitor",
+        title: "This is Xmonitor",
+        data: ["Xmonitor01", "Xmonitor02", "Xmonitor03"],
+      },
+      {
+        href: "ZXmonitor",
+        title: "This is ZXmonitor",
+        data: ["ZXmonitor01", "ZXmonitor02", "ZXmonitor03"],
+      },
+    ],
   },
-  camera: {
-    isHref: '',
-    data: [
-      'camera01',
-      'camera02',
-      'camera03',
-    ]
+  {
+    slugCate: "laptop",
+    dataRes: [
+      {
+        href: "laptop",
+        title: "This is laptop",
+        data: ["laptop01", "laptop02", "laptop03"],
+      },
+    ],
   },
+  {
+    slugCate: "camera",
+    dataRes: [
+      {
+        href: "",
+        title: "This is camera",
+        data: ["camera01", "camera02", "camera03"],
+      },
+    ],
+  },
+];
 
-}
+const getMenuByCate = (menuCategoryItem: any) => {
+  return dataCateRaw.filter((item) => item.slugCate === menuCategoryItem);
+};
+
+const gg = (arr: any) => {
+  let temp = "";
+  getMenuByCate(arr).forEach((value) => {
+    value.dataRes.forEach((item) => {
+      temp += `<a href="#" class=\"h-5 text-xs font-bold mx-3 hover:text-blue-600\">
+          ${item.title}
+        </a>`;
+      item.data.forEach((gg) => {
+        temp += `<a href="#" class=\"h-5 text-xs mx-3 hover:text-blue-600\">
+          ${gg}
+        </a>`;
+      });
+    });
+  });
+  return temp;
+};
 
 const NavBarCategory = () => {
   const [displayCategoryOption, setDisplayCategoryOption] =
@@ -130,24 +148,11 @@ const NavBarCategory = () => {
 
       <div
         className={
-          "absolute bg-gray-200 w-192 h-96 shadow-md top-11 left-48 " +
+          "pt-1 absolute bg-gray-50 w-192 h-96 shadow-md top-11 left-48 flex flex-col flex-wrap " +
           displaySubBox
         }
       >
-        <a
-          href="#"
-          className="flex items-center h-8 hover:bg-blue-600 hover:text-white"
-        >
-          <i className="bx bx-desktop mx-3 text-xl"></i>
-          <span className="text-sm">Màn hình - Phụ kiện IT</span>
-        </a>
-        <a
-          href="#"
-          className="flex items-center h-8 hover:bg-blue-600 hover:text-white"
-        >
-          <i className="bx bx-laptop mx-3 text-xl"></i>
-          <span className="text-sm">Laptop - Bàn Phím {menuCategoryItem}</span>
-        </a>
+        {ReactHtmlParser(gg(menuCategoryItem))}
       </div>
     </div>
   );
