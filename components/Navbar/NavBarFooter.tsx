@@ -4,29 +4,29 @@ const NavBarFooter = () => {
       <div className="font-bold uppercase italic">
         Freship <span className="font-bold italic text-yellow-400">+</span>
       </div>
-      <ul className="quick-trend-menu flex justify-between w-3/6">
+      <ul className="quick-trend-menu flex justify-between w-3/6 text-sm pt-1">
         <li>
-          <a href="#">thời trang nữ</a>
+          <a href="#" className='hover:font-bold'>thời trang nữ</a>
         </li>
         <li>
-          <a href="#">giày nữ</a>
+          <a href="#" className='hover:font-bold'>giày nữ</a>
         </li>
         <li>
-          <a href="#">túi nữ</a>
+          <a href="#" className='hover:font-bold'>túi nữ</a>
         </li>
         <li>
-          <a href="#">thời trang nam</a>
+          <a href="#" className='hover:font-bold'>thời trang nam</a>
         </li>
         <li>
-          <a href="#">giày nam</a>
+          <a href="#" className='hover:font-bold'>giày nam</a>
         </li>
         <li>
-          <a href="#">túi nam</a>
+          <a href="#" className='hover:font-bold'>túi nam</a>
         </li>
       </ul>
       <div className="flex hover:cursor-pointer">
         <i className="bx bxs-dollar-circle text-lg text-yellow-500"></i>
-        <span className="pt-1 ml-1 text-sm">Bán hàng cùng NiTa</span>
+        <span className="pt-1 ml-1 text-sm hover:font-bold">Bán hàng cùng NiTa</span>
       </div>
     </div>
   );
