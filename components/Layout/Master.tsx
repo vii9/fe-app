@@ -3,11 +3,13 @@ import Header from "./Header";
 
 const LayoutMaster = (props: any) => {
   return (
-    <section className='max-w-7xl m-auto'>
+    <div className="">
       <Header />
-      <main>{props.children}</main>
-      <Footer />
-    </section>
+      <section className="max-w-7xl m-auto">
+        <main>{props.children}</main>
+        <Footer />
+      </section>
+    </div>
   );
 };
 

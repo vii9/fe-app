@@ -48,16 +48,16 @@ const getMenuByCate = (menuCategoryItem: any) => {
   return dataCateRaw.filter((item) => item.slugCate === menuCategoryItem);
 };
 
-const gg = (arr: any) => {
+const renderSubCategory = (arr: any) => {
   let temp = "";
   getMenuByCate(arr).forEach((value) => {
-    value.dataRes.forEach((item) => {
-      temp += `<a href="#" class=\"h-5 text-xs font-bold mx-3 hover:text-blue-600\">
-          ${item.title}
+    value.dataRes.forEach((itemTitle) => {
+      temp += `<a href="#" class=\"h-5 hover-category text-xs font-bold mx-3\">
+          ${itemTitle.title}
         </a>`;
-      item.data.forEach((gg) => {
-        temp += `<a href="#" class=\"h-5 text-xs mx-3 hover:text-blue-600\">
-          ${gg}
+      itemTitle.data.forEach((itemDetail) => {
+        temp += `<a href="#" class=\"h-5 hover-category text-xs mx-3 text-gray-500\">
+          ${itemDetail}
         </a>`;
       });
     });
@@ -97,7 +97,7 @@ const NavBarCategory = () => {
     >
       <div className="category-box flex hover:cursor-pointer">
         {/* <i className="bx bx-category text-yellow-50 text-4xl bg-gradient-to-r from-purple-400 via-pink-500"></i> */}
-        <i className="bx bx-category text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"></i>
+        <i className="bx bx-category text-4xl text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-500"></i>
         <span className=" text-sm text-yellow-50 ml-2 ">
           Danh Mục <br />
           <b className="">
@@ -108,24 +108,24 @@ const NavBarCategory = () => {
 
       <div
         className={
-          "absolute bg-gray-50 w-60 h-64 shadow-2xl top-11 -left-12 " +
+          "z-50 absolute bg-gray-50 w-60 h-64 shadow-2xl top-11 -left-12 " +
           displayCategoryOption
         }
       >
         <a
           href="monitor"
-          className="flex items-center h-8 hover:bg-blue-600 hover:text-white"
+          className="flex items-center h-8 hover:bg-blue-600 text-gray-500 hover:text-white"
           data-category="monitor"
           onMouseEnter={categorySubMouseEnter}
           onMouseLeave={categorySubMouseLeave}
         >
-          <i className="bx bx-desktop mx-3 text-xl"></i>
+          <i className="bx bx-desktop mx-3 text-xl "></i>
           <span className="text-sm">Màn hình - Phụ kiện IT</span>
         </a>
 
         <a
           href="laptop"
-          className="flex items-center h-8 hover:bg-blue-600 hover:text-white"
+          className="flex items-center h-8 hover:bg-blue-600 text-gray-500 hover:text-white"
           data-category="laptop"
           onMouseEnter={categorySubMouseEnter}
           onMouseLeave={categorySubMouseLeave}
@@ -136,7 +136,7 @@ const NavBarCategory = () => {
 
         <a
           href="camera"
-          className="flex items-center h-8 hover:bg-blue-600 hover:text-white"
+          className="flex items-center h-8 hover:bg-blue-600 text-gray-500 hover:text-white"
           data-category="camera"
           onMouseEnter={categorySubMouseEnter}
           onMouseLeave={categorySubMouseLeave}
@@ -148,11 +148,11 @@ const NavBarCategory = () => {
 
       <div
         className={
-          "pt-1 absolute bg-gray-50 w-192 h-96 shadow-md top-11 left-48 flex flex-col flex-wrap " +
+          "z-50 pt-1 absolute bg-gray-50 w-192 h-96 shadow-md top-11 left-48 flex flex-col flex-wrap " +
           displaySubBox
         }
       >
-        {ReactHtmlParser(gg(menuCategoryItem))}
+        {ReactHtmlParser(renderSubCategory(menuCategoryItem))}
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const NavBarAccount = () => {
       onMouseLeave={accountOnMouseLeave}
     >
       <div className="account-box flex hover:cursor-pointer">
-        <i className="bx bx-user text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"></i>
+        <i className="bx bx-user text-4xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-yellow-500"></i>
         <div className="account-text-options text-sm text-yellow-50 ml-2">
           Đăng nhập/ Đăng ký <br />
           <span className="font-bold text-yellow-50">
@@ -26,7 +26,7 @@ const NavBarAccount = () => {
       {/* Show Options Login, Register */}
       <div
         className={
-          "auth-account-option py-2 absolute bg-gray-200 w-60 h-64 flex flex-col justify-around items-center rounded-b-md shadow-2xl " +
+          "z-50 auth-account-option py-2 absolute bg-gray-200 w-60 h-64 flex flex-col justify-around items-center rounded-b-md shadow-2xl " +
           displayAccountOption
         }
       >
