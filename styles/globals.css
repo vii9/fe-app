@@ -6,7 +6,8 @@
 @tailwind utilities;
 
 body {
-  font-family: "Poppins", monospace;
+  /* font-family: "Poppins", monospace; */
+  font: 14px/18px Arial,Helvetica,sans-serif;
 }
 
 @layer base {

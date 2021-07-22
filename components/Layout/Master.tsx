@@ -5,10 +5,8 @@ const LayoutMaster = (props: any) => {
   return (
     <div className="">
       <Header />
-      <section className="max-w-7xl m-auto">
-        <main>{props.children}</main>
-        <Footer />
-      </section>
+      <main>{props.children}</main>
+      <Footer />
     </div>
   );
 };
