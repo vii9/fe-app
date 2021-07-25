@@ -39,7 +39,7 @@ export default function RegisterComponent() {
               className="ml-3 w-full h-10 focus:outline-none rounded-md pl-3 shadow-3xl"
               type="text"
               name="email"
-              placeholder="nhập số điện thoại hoặc email"
+              placeholder="nhập email"
             />
           </div>
         </div>

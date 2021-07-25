@@ -81,10 +81,7 @@ const NavBarCategory = () => {
 
   const categorySubMouseEnter = (e: any) => {
     setDisplaySubBox("");
-    console.log(e.target.getAttribute("data-category"));
-
     const categorySlug = e.target.getAttribute("data-category");
-
     setMenuCategoryItem(categorySlug);
   };
   const categorySubMouseLeave = () => setDisplayCategoryOption("");

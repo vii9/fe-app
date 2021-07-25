@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 @import url("https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css");
+@import "nprogress/nprogress.css";
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +8,7 @@
 
 body {
   /* font-family: "Poppins", monospace; */
-  font: 14px/18px Arial,Helvetica,sans-serif;
+  font: 14px/18px Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -51,4 +52,9 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+#nprogress .bar {
+  background-color: red;
+  height: 3px;
 }
