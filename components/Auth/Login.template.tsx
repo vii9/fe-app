@@ -61,9 +61,15 @@ export default function LoginComponent() {
           </button>
         </div>
         <div className="text-center">
-          <i className="text-indigo-500 pt-1 text-2xl rounded-full w-10 h-10 text-center mr-3 bg-gray-300 shadow-3xl hover:cursor-pointer hover:bg-gray-400 bx bxl-facebook"></i>
-          <i className="text-red-500 pt-1 text-2xl rounded-full w-10 h-10 text-center mr-3 bg-gray-300 shadow-3xl hover:cursor-pointer hover:bg-gray-400 bx bxl-google"></i>
-          <i className="text-yellow-600 pt-1 text-2xl rounded-full w-10 h-10 text-center mr-3 bg-gray-300 shadow-3xl hover:cursor-pointer hover:bg-gray-400 bx bxl-instagram"></i>
+          <i className="text-indigo-500 pt-1 text-2xl rounded-full w-10 h-10 text-center mr-3 bg-gray-100 shadow-3xl hover:cursor-pointer hover:bg-gray-300 bx bxl-facebook"></i>
+          <i className="text-red-500 pt-1 text-2xl rounded-full w-10 h-10 text-center mr-3 bg-gray-100 shadow-3xl hover:cursor-pointer hover:bg-gray-300 bx bxl-google"></i>
+          <i className="text-yellow-600 pt-1 text-2xl rounded-full w-10 h-10 text-center mr-3 bg-gray-100 shadow-3xl hover:cursor-pointer hover:bg-gray-300 bx bxl-instagram"></i>
+        </div>
+        <div className="text-center mt-5 font-semibold text-gray-500">
+          Chưa đăng ký ?{" "}
+          <a href="#" className="text-indigo-400 hover:cursor-pointer">
+            Tạo tài khoản
+          </a>
         </div>
       </div>
     </div>

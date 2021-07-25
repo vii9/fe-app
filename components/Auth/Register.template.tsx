@@ -86,10 +86,16 @@ export default function RegisterComponent() {
             <i className="bx bx-book-reader text-lg underline"></i>
           </div>
         </div>
-        <div className="flex justify-around mb-9">
+        <div className="flex justify-around mb-4">
           <button className="bg-green-500 w-64 h-10 rounded-md font-semibold text-purple-100 text-lg hover:bg-green-600 hover:cursor-pointer">
             Đăng Ký
           </button>
+        </div>
+        <div className="text-center mt-5 font-semibold text-gray-500">
+          Đã có tài khoản ?{" "}
+          <a href="#" className="text-indigo-400 hover:cursor-pointer">
+            Đăng nhập
+          </a>
         </div>
       </div>
     </div>

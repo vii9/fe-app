@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 
 const NavBarAccount = () => {
   const [displayAccountOption, setDisplayAccountOption] = useState("invisible");
@@ -30,12 +31,17 @@ const NavBarAccount = () => {
           displayAccountOption
         }
       >
-        <button className="bg-yellow-400 h-10 rounded-md w-52 font-bold hover:bg-yellow-300">
-          Đăng nhập
-        </button>
-        <button className="bg-yellow-400 h-10 rounded-md w-52 font-bold hover:bg-yellow-300">
-          Tạo tài khoản
-        </button>
+        <Link href="/auth/login">
+          <button className="bg-yellow-400 h-10 rounded-md w-52 font-bold hover:bg-yellow-300">
+            Đăng nhập
+          </button>
+        </Link>
+        <Link href="/auth/register">
+          <button className="bg-yellow-400 h-10 rounded-md w-52 font-bold hover:bg-yellow-300">
+            Tạo tài khoản
+          </button>
+        </Link>
+
         {/* supper center| flex justify-around items-center */}
         <button className="h-10 w-52 rounded-md bg-blue-700 flex justify-around items-center px-1 hover:bg-blue-600">
           <i className="bx bxl-facebook-circle text-3xl text-blue-300"></i>
