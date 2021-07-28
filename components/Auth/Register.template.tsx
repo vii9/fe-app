@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RegisterComponent() {
   return (
     <div className="flex justify-around">
@@ -5,8 +7,8 @@ export default function RegisterComponent() {
         <h1 className="text-3xl font-semibold text-indigo-500 mt-4 text-center">
           Đăng Ký
         </h1>
-        <div className="ml-8 my-5 text-gray-500 flex items-center">
-          <div className="font-semibold w-48">Họ và Tên</div>
+        <div className="mx-4 sm:ml-8 my-5 text-gray-500 flex items-center">
+          <div className="font-semibold w-48 hidden sm:block">Họ và Tên</div>
           <div className="flex items-center w-full">
             <i className="bx bx-user text-3xl"></i>
             <input
@@ -18,8 +20,10 @@ export default function RegisterComponent() {
           </div>
         </div>
 
-        <div className="ml-8 my-5 text-gray-500 flex items-center">
-          <div className="font-semibold w-48">Số điện thoại</div>
+        <div className="mx-4 sm:ml-8 my-5 text-gray-500 flex items-center">
+          <div className="font-semibold w-48 hidden sm:block">
+            Số điện thoại
+          </div>
           <div className="flex items-center w-full">
             <i className="bx bx-phone-call text-3xl"></i>
             <input
@@ -31,8 +35,8 @@ export default function RegisterComponent() {
           </div>
         </div>
 
-        <div className="ml-8 my-5 text-gray-500 flex items-center">
-          <div className="font-semibold w-48">Email</div>
+        <div className="mx-4 sm:ml-8 my-5 text-gray-500 flex items-center">
+          <div className="font-semibold w-48 hidden sm:block">Email</div>
           <div className="flex items-center w-full">
             <i className="bx bx-mail-send text-3xl"></i>
             <input
@@ -43,8 +47,8 @@ export default function RegisterComponent() {
             />
           </div>
         </div>
-        <div className="ml-8 my-5 text-gray-500 flex items-center">
-          <div className="font-semibold w-48">Mật khẩu</div>
+        <div className="mx-4 sm:ml-8 my-5 text-gray-500 flex items-center">
+          <div className="font-semibold w-48 hidden sm:block">Mật khẩu</div>
           <div className="flex items-center w-full">
             <i className="bx bx-lock-open text-3xl"></i>
             <input
@@ -56,8 +60,10 @@ export default function RegisterComponent() {
           </div>
         </div>
 
-        <div className="ml-8 my-5 text-gray-500 flex items-center">
-          <div className="font-semibold w-48">Xác nhận mật khẩu</div>
+        <div className="mx-4 sm:ml-8 my-5 text-gray-500 flex items-center">
+          <div className="font-semibold w-48 hidden sm:block">
+            Xác nhận mật khẩu
+          </div>
           <div className="flex items-center w-full">
             <i className="bx bx-lock text-3xl"></i>
             <input
@@ -69,10 +75,10 @@ export default function RegisterComponent() {
           </div>
         </div>
 
-        <div className="ml-8 my-4 text-gray-500 flex justify-between items-baseline">
+        <div className="sm:ml-8 my-4 text-gray-500 flex justify-between items-baseline">
           <div className="font-semibold mb-2 flex items-center">
             <input
-              className="w-5 h-5 focus:outline-none mr-4 ml-20 outline-none"
+              className="w-5 h-5 focus:outline-none mr-4 ml-5 sm:ml-20 outline-none"
               type="checkbox"
               name="acceptTerms"
               id="accept-terms"
@@ -81,8 +87,9 @@ export default function RegisterComponent() {
               Chấp nhận điều khoản
             </label>
           </div>
-          <div className="hover:font-bold hover:text-indigo-400 hover:cursor-pointer">
-            Điều khoản tham gia <span className="text-lg">Nita</span>{" "}
+          <div className="hover:font-bold hover:text-indigo-400 hover:cursor-pointer pr-4">
+            Điều khoản tham gia <br className="sm:hidden" />{" "}
+            <span className="text-lg">Nita</span>{" "}
             <i className="bx bx-book-reader text-lg underline"></i>
           </div>
         </div>
@@ -93,9 +100,11 @@ export default function RegisterComponent() {
         </div>
         <div className="text-center mt-5 font-semibold text-gray-500">
           Đã có tài khoản ?{" "}
-          <a href="#" className="text-indigo-400 hover:cursor-pointer">
-            Đăng nhập
-          </a>
+          <Link href="/auth/login">
+            <a href="#" className="text-indigo-400 hover:cursor-pointer">
+              Đăng nhập
+            </a>
+          </Link>
         </div>
       </div>
     </div>

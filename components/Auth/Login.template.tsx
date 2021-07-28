@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function LoginComponent() {
   return (
     // bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w-screen h-screen
@@ -67,9 +69,11 @@ export default function LoginComponent() {
         </div>
         <div className="text-center mt-5 font-semibold text-gray-500">
           Chưa đăng ký ?{" "}
-          <a href="#" className="text-indigo-400 hover:cursor-pointer">
-            Tạo tài khoản
-          </a>
+          <Link href="/auth/register">
+            <a className="text-indigo-400 hover:cursor-pointer">
+              Tạo tài khoản
+            </a>
+          </Link>
         </div>
       </div>
     </div>

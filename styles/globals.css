@@ -9,16 +9,18 @@
 body {
   /* font-family: "Poppins", monospace; */
   font: 14px/18px Arial, Helvetica, sans-serif;
+  color: black;
 }
 
+/*
 @layer base {
   body {
-    @apply bg-gray-200 text-gray-900;
-
-    /*** darkMode */
-    /* @apply bg-gray-900 text-gray-100; */
+    
+    @apply bg-gray-200 text-gray-900; //darkMode bg-gray-900 text-gray-100;  
+    
   }
-}
+} */
+
 .hover-category:hover {
   color: #2962ff;
   font-weight: bold;
