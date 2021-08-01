@@ -1,13 +1,10 @@
+import useMediaQueryLarger from "../../utils/useMediaQueryLarger";
 import NavBar from "../Navbar/NavbarIndex";
+import NavbarMobile from "../Navbar/NavbarMobile";
 
 const Header = () => {
-  return (
-    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-24 p-5">
-      <section className="max-w-7xl m-auto">
-        <NavBar />
-      </section>
-    </div>
-  );
+  const isDesktop = useMediaQueryLarger(1060);
+  return <>{isDesktop ? <NavBar /> : <NavbarMobile />}</>;
 };
 
 export default Header;

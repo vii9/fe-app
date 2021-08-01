@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ProductsComponent() {
+export default function ProductsComponentV1() {
   const products = [];
 
   for (let i = 1; i < 26; i++) {
     products.push(
       <Link key={i} href={`/p/${i}`}>
         <a
-          key={i}
-          className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 bg-gray-50 h-80 md:hover:shadow-3xl md:hover:cursor-pointer md:hover:bg-white md:hover:z-10 rounded-sm"
+          key={i} // w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 bg-gray-50 h-80 hover:shadow-3xl hover:cursor-pointer hover:bg-white rounded-sm
+          className="w-1/5 bg-gray-50 h-80 hover:shadow-3xl hover:cursor-pointer hover:bg-white hover:z-10 rounded-sm"
         >
           <div className="text-center">
             <Image
@@ -50,8 +50,10 @@ export default function ProductsComponent() {
   }
 
   return (
-    <section className="m-2 sm:mt-2 border-indigo-600 sm:max-w-7xl sm:m-auto">
-      <div className="flex flex-wrap">{products}</div>
-    </section>
+    <div className="max-w-7xl m-auto">
+      <section className="mt-2 border-indigo-600">
+        <div className="flex flex-wrap">{products}</div>
+      </section>
+    </div>
   );
 }

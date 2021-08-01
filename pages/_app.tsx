@@ -11,11 +11,9 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // <LayoutMaster>
-    //   <Component {...pageProps} />
-    // </LayoutMaster>
-
-    <Component {...pageProps} />
+    <LayoutMaster>
+      <Component {...pageProps} />
+    </LayoutMaster>
   );
 }
 export default MyApp;

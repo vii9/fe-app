@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CheckoutComponent() {
   return (
-    <section>
+    <section className='max-w-7xl m-auto'>
       <h2 className="font-bold text-lg mt-4 mb-2 text-gray-600">GIỎ HÀNG</h2>
       <div className="flex h-80">
         <div className="w-3/4">

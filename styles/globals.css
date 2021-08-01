@@ -12,14 +12,14 @@ body {
   color: black;
 }
 
-/*
+
 @layer base {
   body {
     
-    @apply bg-gray-200 text-gray-900; //darkMode bg-gray-900 text-gray-100;  
+    @apply bg-gray-200 text-gray-700;   
     
   }
-} */
+} 
 
 .hover-category:hover {
   color: #2962ff;

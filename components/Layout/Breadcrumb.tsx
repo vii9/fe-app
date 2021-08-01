@@ -10,15 +10,34 @@ export default function Breadcrumb({
   slug3 = "",
 }: Props) {
   return (
-    <div className="max-w-7xl m-auto bg-gray-300 text-gray-500 h-9 flex items-center">
-      Home <i className="bx bxs-right-arrow-alt text-indigo-400 text-2xl"></i>
-      <a href="#" className="hover:text-indigo-600 hover:font-bold">
-        {slug1}
-      </a>{" "}
-      <i className="bx bxs-right-arrow-alt text-indigo-400 text-2xl"></i>
-      <a href="#" className="hover:text-indigo-600 hover:font-bold">
-        {slug2}
-      </a>
+    <div className="bg-gray-300">
+      <div className="m-auto max-w-7xl bg-gray-300 text-gray-500 h-9 flex items-center px-3">
+        Trang Chủ
+        {slug1.length > 0 && (
+          <>
+            <i className="bx bxs-right-arrow-alt text-indigo-400 text-2xl"></i>
+            <a href="#" className="hover:text-indigo-600 hover:font-bold">
+              {slug1}
+            </a>
+          </>
+        )}
+        {slug2.length > 0 && (
+          <>
+            <i className="bx bxs-right-arrow-alt text-indigo-400 text-2xl"></i>
+            <a href="#" className="hover:text-indigo-600 hover:font-bold">
+              {slug2}
+            </a>
+          </>
+        )}
+        {slug3.length > 0 && (
+          <>
+            <i className="bx bxs-right-arrow-alt text-indigo-400 text-2xl"></i>
+            <a href="#" className="hover:text-indigo-600 hover:font-bold">
+              {slug3}
+            </a>
+          </>
+        )}
+      </div>
     </div>
   );
 }

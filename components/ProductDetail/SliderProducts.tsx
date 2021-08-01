@@ -12,12 +12,10 @@ export default function SliderProducts() {
     slides.push(
       <SwiperSlide key={i + 1}>
         <div className="text-center">
-          <Image
+          <img
             className="hover:cursor-pointer"
             src={"/images/products/12-noi" + i + ".jpg"}
             alt="Slider images Products"
-            width="444"
-            height="444"
           />
         </div>
       </SwiperSlide>
