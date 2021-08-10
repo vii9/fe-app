@@ -1,29 +1,26 @@
-import Image from "next/image";
 import SliderProducts from "./SliderProducts";
 
-export default function ProductComponent() {
+export default function ProductDetailComponent() {
   return (
     // h647px  460x640
     <div className="max-w-7xl m-auto">
-      <div className="flex h-160">
-        <div className="bg-blue-50 w-94">
+      <div className="lg:flex lg:h-160">
+        <div className="bg-blue-50 lg:w-94">
           <SliderProducts />
           <div className="ads-google">
-            <div className="text-center mt-5">
-              <Image
-                className="hover:cursor-pointer"
+            <div className="text-center p-3 lg:p-0 lg:mt-7 lg:mx-5">
+              <img
+                className="hover:cursor-pointer shadow-3xl"
                 src={"/images/products/ads.png"}
                 alt="Slider images Products"
-                width="400"
-                height="150"
               />
             </div>
           </div>
         </div>
-        <div className="flex-1 bg-blue-50 shadow-2xl">
+        <div className="block lg:flex-1 bg-blue-50 shadow-2xl">
           {/* <div className="border border-purple-500 mt-6 mb-5 ml-3 mr-5"> */}
-          <div className="mt-6 mb-5 ml-3 mr-5">
-            <div className="">
+          <div className="lg:mt-6 lg:mb-5 ml-3 mr-5">
+            <div className="pt-3">
               Thương hiệu:{" "}
               <span className="text-indigo-600 border-r-2 border-gray-400 pr-2 mr-2">
                 Lock&Lock
@@ -34,7 +31,7 @@ export default function ProductComponent() {
               </span>
             </div>
             <div className="flex mt-1 mb-1">
-              <div className="text-2xl w-101 h-16 text-gray-600">
+              <div className="text-xl lg:text-2xl lg:w-101 lg:h-16 text-gray-600 font-semibold">
                 Lò Nướng Chân Không Điện Tử Lock&Lock EFISSWEBK 10L - Hàng Chính
                 Hãng
               </div>
@@ -60,7 +57,7 @@ export default function ProductComponent() {
             </div>
             {/* <div className="flex border-red-600 border mt-4"> */}
             <div className="flex mt-4">
-              <div className=" w-2/3">
+              <div className=" lg:w-2/3">
                 <div className="p-3 bg-gradient-to-r from-red-600 to-yellow-500 rounded-md">
                   <div className="font-semibold text-4xl text-indigo-100">
                     3.190.000 ₫
@@ -94,7 +91,7 @@ export default function ProductComponent() {
                   Chọn Mua
                 </button>
               </div>
-              <div className="w-1/3 pl-32">y</div>
+              <div className="hidden lg:block w-1/3 lg:pl-32">y</div>
             </div>
           </div>
         </div>

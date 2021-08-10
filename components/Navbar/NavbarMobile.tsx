@@ -92,9 +92,11 @@ export default function NavbarMobile() {
 
       <div className="flex justify-between items-center px-3 pb-1 pt-2">
         <div className="font-semibold text-yellow-100">FREESHIP +</div>
-        <div className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-yellow-400">
-          NiTA
-        </div>
+        <Link href="/">
+          <div className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-yellow-400">
+            NiTA
+          </div>
+        </Link>
         <Link href="/checkout">
           <div className="shopping-card-box flex hover:cursor-pointer">
             <div className="icon-card-box relative">
