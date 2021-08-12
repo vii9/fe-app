@@ -12,3 +12,12 @@ getServerSideProps -> default get data change from server
 getStaticPaths -> dynamic route
                 
 ```
+## Tech
+```
+    1 - NEXT.Js + React.Js
+    2 - TailwindCss
+    3 - Redux + Redux Toolkit
+    4 - CMS Laravel API (GRAPH QL)
+    5 - NextAuth.js
+    6 - Database MySQL
+```
